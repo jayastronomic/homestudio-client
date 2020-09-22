@@ -1,0 +1,5 @@
+.header__icon {
+    object-fit: contain;
+    height: 75px;
+    margin-left: 20px;
+}
