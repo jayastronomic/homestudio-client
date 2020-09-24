@@ -1,0 +1,44 @@
+.banner {
+    background-image: url(https://images.unsplash.com/photo-1518972559570-7cc1309f3229?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+    height: 50vh;
+    position: relative;
+}
+
+.banner__info {
+    background-color: black;
+    color: white;
+    padding-top: 25vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+    width: 300px;
+}
+
+.banner__info > button {
+    background-color: rgba(255, 196, 0, 0.904);
+    color: white;
+    text-transform: inherit;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.banner__search {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.banner__searchButton {
+    background-color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+    color: rgba(255, 196, 0, 0.904) !important;
+}
+
+.banner__info > button:hover {
+    background-color: white;
+    color: rgba(255, 196, 0, 0.904)
+}
+
+.banner__info > h5 {
+    margin-top: 10px;
+}
