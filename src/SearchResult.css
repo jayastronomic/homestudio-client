@@ -9,6 +9,8 @@
 
 }
 
+
+
 .searchResult:hover {
     opacity: 0.8;
 }
@@ -54,6 +56,18 @@
     justify-content: space-between;
 }
 
+.searchResult__button > a {
+    background-color: rgba(255, 196, 0, 0.904);
+    color: white;
+    text-transform: inherit;
+    /* margin-top: 20px; */
+    margin-left: 20px;
+    font-weight: 600;
+}
+.searchResult__button:hover > a {
+    background-color: white; 
+    color:rgba(255, 196, 0, 0.904);
+}
 .searchResult__star{
     color: red;
 }

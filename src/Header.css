@@ -41,3 +41,17 @@
     width: 15vw;
     margin-right: 80px;
 }
+
+
+.header__rightIcon__one {
+    cursor: pointer;
+}
+
+.header__rightIcon__two {
+    cursor: pointer;
+}
+
+.header__rightIcon__three {
+    cursor: pointer;
+}
+
