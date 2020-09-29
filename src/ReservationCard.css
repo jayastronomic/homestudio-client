@@ -1,0 +1,15 @@
+.reservationCard__button {
+    margin-top: 20px;
+}
+
+.reservationCard__button > button{
+    text-transform: inherit;
+    background-color: white;
+    color:rgba(238, 87, 87, 0.959);
+    border-radius: 20px;
+}
+
+.reservationCard__button > button:hover {
+    background-color: rgba(238, 87, 87, 0.959);
+    color: white;
+}

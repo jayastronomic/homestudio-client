@@ -7,9 +7,10 @@ const  SearchResultContainer = (props) => {
 
        return(
            <div>
+               
                <React.Fragment>
                {props.results.map((result, index) => {
-                   return <SearchResult key={index} {...result} />
+                   return <SearchResult user={props.user} key={index} studio={result} />
                })}
                </React.Fragment>
                {/* <div>

@@ -7,6 +7,7 @@ import SignUp  from './components/registrations/SignUp'
 import Login from './components/registrations/Login'
 import ReservationPage from './components/ReservationPage'
 import GoMap from './components/Map'
+import ReservationIndex from './components/ReservationIndex'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 
@@ -56,7 +57,6 @@ class App extends Component {
 
 
   render(){
-    console.log(this.state)
     return (
       //BEM 
       <div className="app">
@@ -64,12 +64,13 @@ class App extends Component {
           <Header  handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>
 
           <Switch>
-            <Route exact path="/search" render={(props) => <SearchPage {...props} loggedInStatus={this.state.isLoggedIn} />} />
+            <Route exact path="/search" render={(props) => <SearchPage user={this.state.user} {...props} loggedInStatus={this.state.isLoggedIn} />} />
             <Route exact path="/" render={(props) => <Home {...props} loggedInStatus={this.state.isLoggedIn} /> } />
             <Route exact path="/signup" render={(props) => <SignUp {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn} />} />
             <Route exact path="/login" render={(props) => <Login {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn} />}/>
             <Route exact path="/map" render={()=> <GoMap /> } />
             <Route exact path="/reservation/:id" component={ReservationPage} />
+            <Route exact path="/reservations" render={() => <ReservationIndex user={this.state.user} />} />
           </Switch >
 
           <Footer/>

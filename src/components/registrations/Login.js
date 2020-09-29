@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import axios from 'axios'
 
 
 const API = "http://localhost:3001/api/v1/login"

@@ -1,34 +1,38 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ReservationForm from './ReservationForm'
 
 
-class  ReservationPage extends Component {
-    constructor(){
-        super();
-        this.state = {
-            studioInfo: {}
-        }
-    }
+const  ReservationPage = (props) => {
+    // constructor(){
+    //     super();
+    //     this.state = {
+    //         studio: {},
+    //         user: {}
+            
+    //     }
+    // }
 
 
-    componentDidMount(){
-        this.setState({
-            studioInfo: this.props.location.state.studioInfo
-        })
-    }
+    // componentDidMount(){
+    //     this.setState({
+    //         studioData: this.props.location.data
+    //     })
+    // }
 
-    render(){
+    // render(){
+        
         return(
+            
         <div className="reservationPage">
             <div>
-
+                
             </div>
             <div>
-                <ReservationForm studioId={this.state.studioInfo.id}/>
+                <ReservationForm userId={props.location.state.user.id} studioId={props.location.state.studio.id}/>
             </div>
         </div>
         )
-    }
+    // }
 }
 
 export default ReservationPage;

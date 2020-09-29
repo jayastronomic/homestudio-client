@@ -25,7 +25,6 @@ class SearchPage extends Component {
     }
 
     render(){
-console.log(this.state.results)
         return( 
             <div className="searchPage">
                 <div className="searchPage__info">
@@ -37,7 +36,7 @@ console.log(this.state.results)
                     <Button variant="outlined">Rooms and Beds</Button>
                     <Button variant="outlined">More Filters</Button>
                 </div>
-                <SearchResultContainer results={this.state.results} />
+                <SearchResultContainer user={this.props.user} results={this.state.results} />
             </div>
         )
     }

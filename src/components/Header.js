@@ -24,7 +24,7 @@ const Header = (props) => {
     }
     return (
         <div className="header">
-            <Link to='/'><img className="header__icon" src={logo} /></Link>
+            <Link to='/'><img  className="header__icon" alt="" src={logo} /></Link>
 
             <div className="header__center">
                 <input type="text"/>
@@ -34,7 +34,7 @@ const Header = (props) => {
 
             <div className="header__right">
                 <Link to="/add_listing"><p>Add a listing</p></Link>
-                <Link to="/signup">sign up</Link>
+                {!props.loggedInStatus && <Link to="/signup">sign up</Link>}
                 {!props.loggedInStatus && <Link to="/login">login</Link>}
                 {props.loggedInStatus && <Link to="/logout" onClick={handleClick}>logout</Link>}
                 <LanguageIcon className="header__rightIcon__one"/>
