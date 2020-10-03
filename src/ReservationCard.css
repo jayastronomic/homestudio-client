@@ -1,4 +1,4 @@
-.reservationCard__button {
+ /* .reservationCard__button {
     margin-top: 20px;
 }
 
@@ -7,9 +7,23 @@
     background-color: white;
     color:rgba(238, 87, 87, 0.959);
     border-radius: 20px;
-}
+} */
 
-.reservationCard__button > button:hover {
+
+
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+ .cancel:hover {
     background-color: rgba(238, 87, 87, 0.959);
     color: white;
+} 
+.cancel {
+    text-transform: inherit;
+    background-color: white;
+    color:rgba(238, 87, 87, 0.959);
+    border-radius: 20px;
 }
+
+

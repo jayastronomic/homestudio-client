@@ -25,15 +25,16 @@ class SearchPage extends Component {
     }
 
     render(){
+        console.log(this.state)
         return( 
             <div className="searchPage">
                 <div className="searchPage__info">
-                    <p>{this.state.results.length} stays • 26 august to 30 august • 2 guest</p>
-                    <h1>Stays nearby</h1>
+                    <p>{this.state.results.length}+ studios </p>
+                    <h1>Studios nearby</h1>
                     <Button variant="outlined">Cancellation Flexibility</Button>
                     <Button variant="outlined">Type of Place</Button>
                     <Button variant="outlined">Price</Button>
-                    <Button variant="outlined">Rooms and Beds</Button>
+                    <Button variant="outlined">Amenities</Button>
                     <Button variant="outlined">More Filters</Button>
                 </div>
                 <SearchResultContainer user={this.props.user} results={this.state.results} />

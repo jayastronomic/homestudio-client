@@ -1,0 +1,16 @@
+.reservation-title {
+    margin: auto;
+    width:  50%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: 3px chocolate solid;
+    margin-bottom: 10px;
+}
+.no-reservation-title {
+    margin: auto ;
+    width: 50%;
+    text-align: center;
+    color: rgba(233, 230, 230, 0.836);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+

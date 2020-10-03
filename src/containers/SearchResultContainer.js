@@ -1,21 +1,22 @@
 import React from 'react'
 import SearchResult from '../components/SearchResult'
-// import GoMap from '../components/Map'
+import '../SearchResultContainer.css'
+ import Map from '../components/map/Map'
 
 const  SearchResultContainer = (props) => {
 
 
        return(
-           <div>
+           <div className="searchResultContainer">
                
-               <React.Fragment>
+               <div className="searchResultContainer__results">
                {props.results.map((result, index) => {
                    return <SearchResult user={props.user} key={index} studio={result} />
                })}
-               </React.Fragment>
-               {/* <div>
-                    <GoMap/>
-               </div> */}
+               </div>
+               <div className="searchResultContainer__map">
+                        <Map results={props.results}/>
+               </div>
            </div>
         )
    

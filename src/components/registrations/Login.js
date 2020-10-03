@@ -15,10 +15,6 @@ class Login extends Component {
     }
 
 
-    UNSAFE_componentWillMount() {
-        return this.props.loggedInStatus ? this.redirect() : null
-      }
-
 
     handleSubmit = (e) => {
         e.preventDefault()
@@ -83,7 +79,7 @@ class Login extends Component {
         return(
             <div className="login">
                 <h1>Login</h1>
-                <form onSubmit={this.handleSubmit}>
+                <form className="login-form" onSubmit={this.handleSubmit}>
                     <label htmlFor="">username</label><br/>
                     <input type="text" placeholder="Username" name="username" value={this.state.username} onChange={this.handleChange}/><br/>
 

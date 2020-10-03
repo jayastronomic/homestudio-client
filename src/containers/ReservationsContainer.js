@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import ReservationCard from '../components/ReservationCard'
+import ReservationCard from '../components/reservations/ReservationCard'
+import '../ReservationContainer.css'
 
 
 
@@ -14,12 +15,12 @@ class ReservationsContainer extends Component {
 
     async componentDidMount(){
         try {
-            const resp = await fetch(`http://localhost:3001/api/v1/users/${this.props.user.id}/reservations`, {credentials: 'include'})
-            const json = await resp.json();
+        const resp = await fetch(`http://localhost:3001/api/v1/users/${this.props.user.id}/reservations`, {credentials: 'include'})
+        const json = await resp.json()
             this.setState({
                userReservations: json
             })
-            console.log(this.state)
+            console.log(this.state.userReservations)
         } catch (err) {
             console.log(err)
         }
@@ -39,9 +40,17 @@ class ReservationsContainer extends Component {
         return(
             <div>
                 <React.Fragment>
-                    {this.state.userReservations.map((reservation, index) => {
+                    { this.state.userReservations.length !== 0 ?
+
+                    this.state.userReservations.map((reservation, index) => {
                         return <ReservationCard key={index} removeReservation={this.removeReservation} {...reservation}/>
-                    })}
+                    })
+                :
+                    <div className="no-reservation-title">
+                        <h1>No Reservations Found</h1>
+                    </div>
+                
+                    }
                 </React.Fragment>
             </div>
         )

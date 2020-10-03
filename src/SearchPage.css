@@ -14,5 +14,12 @@
 .searchPage__info > button {
     border-radius: 30px;
     text-transform: inherit;
-    margin: 5px
+    margin: 5px;
+    background-color: rgba(23, 159, 250, 0.904);
+    color: white;
+}
+
+.searchPage__info > button:hover {
+    color: rgba(23, 159, 250, 0.904);
+    background-color: white;
 }

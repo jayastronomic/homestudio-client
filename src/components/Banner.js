@@ -16,8 +16,8 @@ const Banner = () => {
                 {showSearch && <Search/>}
             </div>
             <div className="banner__info">
-                <h1>Change the world with your sound</h1>
-                <h5>There is no limit to where you can create. Find places near you to make your sound. </h5>
+                <h1>Change the world with your sound.</h1>
+                <h5>There is no limit to where you can create. Find places near you to make the content you want. </h5>
                 <Button onClick={() => history.push('/search')} variant="outlined">Explore Nearby</Button>
             </div>
             
